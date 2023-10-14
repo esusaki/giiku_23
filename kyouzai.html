@@ -51,36 +51,73 @@
     <div class="container p-3">
         <form action="">
             <div class="display-6">学習記録を残す</div>
-            <div class="row">
-                <div class="col text-end">
-                    <label for="">理解度</label> <br>
-                    <label for="" class="">コメント</label>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-md-2 text-center">理解度</div>
+                        <div class="col-md-6">
+                            <i class="fa-solid fa-star" style="color:gray" id="starbutton_1" onclick="star_update(1)"></i>
+                            <i class="fa-solid fa-star" style="color:gray" id="starbutton_2" onclick="star_update(2)"></i>
+                            <i class="fa-solid fa-star" style="color:gray" id="starbutton_3" onclick="star_update(3)"></i>
+                            <i class="fa-solid fa-star" style="color:gray" id="starbutton_4" onclick="star_update(4)"></i>
+                            <i class="fa-solid fa-star" style="color:gray" id="starbutton_5" onclick="star_update(5)"></i>
+                            
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <select name="" id="" class="form-select">
-                        <option value="">-</option>
-                        <option value="">⭐️</option>
-                        <option value="">⭐️⭐️</option>
-                        <option value="">⭐️⭐️⭐️</option>
-                        <option value="">⭐️⭐️⭐️⭐️</option>
-                        <option value="">⭐️⭐️⭐️⭐️⭐️</option>
-                    </select>
-                    <div>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                <div class="container mt-2">
+                    <div class="row">
+                        <div class="col-md-2 text-center">
+                            <label for="" class="">コメント</label>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
     
-            </div>
-
-            <input type="submit" value="記録を残す" class="btn btn-info text-white" style="width:80%">
+            <input type="submit" value="記録を残す" class="btn btn-info text-white mt-3" style="width:75%">
         </form>
     </div>
 
-
-
+    <div class="container">
+        <div>
+            hogehoge
+            <i class="fa-solid fa-star" style="color:#ffcd00"></i>
+            <i class="fa-solid fa-star" style="color:#ffcd00"></i>
+            <i class="fa-solid fa-star" style="color:gray"></i>
+            <i class="fa-solid fa-star" style="color:gray"></i>
+            <i class="fa-solid fa-star" style="color:gray"></i>
+        </div>
+        <div>面白かったけど、○○の部分がよく分からない</div>
+    </div>
 
     
     <script>hljs.highlightAll();</script>
+    <script src="https://kit.fontawesome.com/12a4c3ee6d.js" crossorigin="anonymous"></script>
+    <script>
+        const starbuttons  = [document.getElementById("starbutton_1"),
+        document.getElementById("starbutton_2"),
+        document.getElementById("starbutton_3"),
+        document.getElementById("starbutton_4"),
+        document.getElementById("starbutton_5")]
+        var rate = 0;
+        function star_update(n){
+            rate = n;
+            for (var i=1;i<=5;i++){
+                if (i<=rate){
+                    starbuttons[i-1].style.color = "#ffcd00";
+                } else {
+                    starbuttons[i-1].style.color = "gray";
+                }
+            }
+
+        }
+
+
+
+    </script>
     
 </body>
 </html>
