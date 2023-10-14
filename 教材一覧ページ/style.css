@@ -1,0 +1,22 @@
+body{
+    background-color: #f5f5f5;
+}
+
+.content{
+    width:290px;
+    height: 380px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #ccc;
+    text-align: center;
+}
+
+.contents{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.content_image{
+    width:125px;
+}
