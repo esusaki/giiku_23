@@ -11,6 +11,7 @@ body{
     box-shadow: 2px 2px 3px #ccc;
     text-align: center;
     height: 380px;
+    position: relative;
 }
 
 .contents{
@@ -48,6 +49,9 @@ body{
     margin: 15px;
     font-size:20px;
     color:white;
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
 }
 
 .start_button{
@@ -60,4 +64,7 @@ body{
     margin: 15px;
     font-size:20px;
     color:white;
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
 }
