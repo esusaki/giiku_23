@@ -30,25 +30,99 @@
 <!-- 本文 -->
 
     <div class="container">
-        <img src="サイコロ.png" alt="サイコロ" class="mx-auto d-block" style="max-width:200px">
+        <img src="サイコロ.png" alt="サイコロ" class="mx-auto d-block mt-3" style="max-width:200px">
         <div class="display-6 text-center">サイコロを作ろう① -HTMLでサイトの枠組みを作ろう-</div>
         <div class="text-center mt-2">教材作成日 2023年10月10日</div>
     </div>
 
     <div class="container">
 
-        <p>（これはサンプル文です）以前、バックエンドエンジニアだった身からすれば、Reactは複雑だと感じることがあります。さらに（私はフレームワーク開発者なのですが）フレームワーク開発者にとってはハイドレーションの仕組みを作ることは厄介です。しかし、しばしばReactを使うことになります。</p>
+        <p>まずは、VSCodeなどのエディタを開いてください。 <br>
+            下のコードをコピーして貼り付け、HTMLファイルとして保存します。</p>
+        
+        <p>このコードでは、HTMLの基本構造を定義しています。</p>
        
-        <p>Reactの優位な点の一つは「JSX」です。最初見た時、JSXは奇妙に思えました。「なんでJavaScriptの中にHTMLのタグが入っているんだ！」。しかし、一度慣れると、JSXは柔軟で、書きやすいことに気づきました。</p>
-       
-        <pre class="container"><code class="html">
-&lt;div class=&quot;container&quot;&gt;
-&lt;img src=&quot;サイコロ.png&quot; alt=&quot;サイコロ&quot; class=&quot;mx-auto d-block&quot; style=&quot;max-width:200px&quot;&gt;
-&lt;div class=&quot;display-6 text-center&quot;&gt;サイコロを作ろう① -HTMLでサイトの枠組みを作ろう-&lt;/div&gt;
-&lt;div class=&quot;text-center mt-2&quot;&gt;教材作成日 2023年10月10日&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-       
-        <p>順を追って説明します。まず、<code>&lt;pre&gt;</code>タグでは、...一方<code>&lt;img&gt;</code>タグでは...</p>
+        <pre class="container"><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;サイコロ&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- この下にコードを書く --&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>次に、サイコロの画像の素材を保存します。</p>
+
+        <p>全部で7枚の画像が必要です。 <br>
+            インターネット検索などで好きな画像を探すか、以下のサンプル画像を保存して使用してください。
+            <ul>
+                <li>デフォルト画像 : "default.png"として保存<br>
+                <img src="images/default.png" alt=""></li>
+                <li>1の目 : "image1.png"として保存<br>
+                    <img src="images/image1.png" alt="">
+                </li>
+                <li>2の目 : "image2.png"として保存<br>
+                <img src="images/image2.png" alt=""></li>
+                <li>3の目 : "image3.png"として保存<br>
+                    <img src="images/image3.png" alt="">
+                </li>
+                <li>4の目 : "image4.png"として保存<br>
+                <img src="images/image4.png" alt="">
+                </li>
+                <li>5の目 : "image5.png"として保存<br>
+                <img src="images/image5.png" alt=""></li>
+                <li>6の目 : "image6.png"として保存<br>
+                <img src="images/image6.png" alt=""></li>
+            </ul>
+        </p>
+
+        <p>7枚の画像は、HTMLファイルと同じフォルダに保存してください。</p>
+
+        <img src="screenshot_2.png" width="400px">
+
+        <p>上の図のように、全てのファイルが同じ階層になっていればOKです。</p>
+
+        <p>次に、以下のように<code>&lt;h1&gt;</code>、<code>&lt;img&gt;</code>、<code>&lt;button&gt;</code>を追加します。</p>
+
+        <pre>
+            <code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;サイコロ&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- この下にコードを書く --&gt;
+&lt;h1&gt;サイコロ&lt;/h1&gt;
+&lt;img src=&quot;default.png&quot;&gt;
+&lt;button&gt;サイコロを振る&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+        </pre>
+
+        <ul>
+            <li><code>&lt;h1&gt;</code>は、ページの見出しを表す要素です。</li>
+            <li>
+                <code>&lt;img&gt;</code>は、画像を表示するための要素です。 <br>
+                   タグの中で、<code>src</code>属性に指定された "default.png" は、表示される画像のファイルパスを表します。</li>
+                   <li><code>&lt;button&gt;</code>は、ユーザーがクリックできるボタンを提供する要素です。</li>
+        </ul>
+
+        <p>この状態で、HTMLファイルをエクスプローラーなどでダブルクリックして、ブラウザから開いてみてください。</p>
+
+        <p>下の図のように、見出し、デフォルト画像、ボタンが表示されていたらOKです。 <br>（ボタンを押しても、まだ何も起きません。）</p>
+
+        <img src="screenshot_1.png" alt="" style="width:300px">
+
+        <p>これでHTMLの枠組みができました。<br>
+             次のレッスンでは、JavaScriptを使い、ランダムに結果が表示される部分を作っていきましょう。</p>
    
     </div>
 

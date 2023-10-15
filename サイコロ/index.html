@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>サイコロ</h1>
-    <img id="saikoro_image" src="default.png">
+    <img id="saikoro_image" src="images/default.png">
     <button onclick="rolldice()">サイコロを振る</button>
     <script>
     var saikoro_image = document.getElementById("saikoro_image");
@@ -13,7 +13,7 @@
 
     function rolldice(){
         var ransu = Math.floor(Math.random() * 6);
-        saikoro_image.src = images[ransu];
+        saikoro_image.src ="images/"+images[ransu];
     }
 
     </script>
